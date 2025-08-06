@@ -11,5 +11,8 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         color: 'black',
         paddingVertical: 10
+    },
+    containerForm:{
+        marginVertical: 10,
     }
 })

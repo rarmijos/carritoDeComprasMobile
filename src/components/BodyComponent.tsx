@@ -4,7 +4,7 @@ import { SECONDARY_COLOR } from '../commons/constants'
 
 //componente reutilizable
 interface Props{
-    children: ReactNode;
+    children: ReactNode; //cualquier tipo de elemento (imagen, texto, etc)
 }
 
 export const BodyComponent = ({children}:Props) => {
