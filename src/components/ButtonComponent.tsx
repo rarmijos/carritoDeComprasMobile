@@ -20,10 +20,9 @@ const styles = StyleSheet.create({
         backgroundColor: TERTIARY_COLOR,
         paddingVertical: 15,
         borderRadius: 10,
-        marginLeft: 120,
-        marginRight: 120,
+        marginLeft: 80,
+        marginRight: 80,
         marginTop: 10,
-
     },
     text: {
         color: SECONDARY_COLOR,

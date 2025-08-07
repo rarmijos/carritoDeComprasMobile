@@ -14,5 +14,17 @@ export const styles = StyleSheet.create({
     },
     containerForm:{
         marginVertical: 10,
+    },
+    iconForm:{
+        position: 'absolute',
+        bottom: 14,
+        right: 18,
+    },
+    textRedirect:{
+        fontSize: 15,
+        color: PRIMARY_COLOR,
+        fontWeight: 'bold',
+        marginTop: 10,
+        alignSelf: 'center',
     }
 })
