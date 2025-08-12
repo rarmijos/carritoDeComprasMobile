@@ -8,6 +8,13 @@ import { ImputComponent } from '../components/ImputComponent';
 import { ButtonComponent } from '../components/ButtonComponent';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { CommonActions, useNavigation } from '@react-navigation/native';
+import { User } from '../navigator/StackNavigator';
+
+
+//interface para las propiedades
+interface Props {
+    users: User[]; //arreglos con la lista de usuarios
+}
 
 //interfacepara el objeto del formulario
 interface FormLogin {
@@ -15,21 +22,7 @@ interface FormLogin {
     password: string
 }
 
-//definir una interfas para los objetos de mi arreglo users
-interface User {
-    id: number,
-    name: string,
-    username: string,
-    password: string
-}
-
-//arreglo con la lista de usuarios
-const users: User[] = [
-    { id: 1, name: 'Roy Armijos', username: 'rarmijos', password: '123' },
-    { id: 2, name: 'Brandon Armijos', username: 'barmijos', password: '456' },
-];
-
-export const LoginScreen = () => {
+export const LoginScreen = ({ users }: Props) => {
     //hook useState para manejar el estado del formulario
     const [formLogin, setFormLogin] = useState<FormLogin>({
         username: '',
@@ -65,8 +58,11 @@ export const LoginScreen = () => {
         if (!verifyUser()) { //verifyUser() == undefined <-- esto es igual 
             Alert.alert('Error', 'Usuario y/o contraseña incorrectos');
             return;
+        } else {
+            Alert.alert('Bienvenido');
         }
-        console.log(formLogin);
+        //console.log(formLogin);
+        navigation.dispatch(CommonActions.navigate({ name: 'Home' }))
     }
 
     return (
