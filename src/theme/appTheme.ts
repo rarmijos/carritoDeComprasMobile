@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
         shadowColor: 'red',
         elevation: 10,
     },
-    headerModal:{
+    headerModal: {
         flexDirection: 'row',
         borderBottomColor: '#ccc',
         borderBottomWidth: 1,
@@ -58,21 +58,21 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         elevation: 2,
     },
-    containerIcon:{
+    containerIcon: {
         flex: 1,
         alignItems: 'flex-end'
     },
-    title:{
+    title: {
         fontSize: 18,
         color: PRIMARY_COLOR,
         fontWeight: 'bold',
     },
-    containerQuantity:{
+    containerQuantity: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
     },
-    buttonQuantity:{
+    buttonQuantity: {
         height: 50,
         width: 50,
         backgroundColor: PRIMARY_COLOR,
@@ -81,28 +81,28 @@ export const styles = StyleSheet.create({
         borderRadius: 25,
         marginTop: 10,
     },
-    buttontextQuantity:{
+    buttontextQuantity: {
         fontSize: 18,
         color: SECONDARY_COLOR,
         fontWeight: 'bold',
     },
-    textQuantity:{
+    textQuantity: {
         fontSize: 18,
         fontWeight: 'bold',
         marginTop: 10,
     },
-    buttonAddCart:{
+    buttonAddCart: {
         backgroundColor: TERTIARY_COLOR,
         marginTop: 15,
         paddingVertical: 10,
         alignItems: 'center',
         borderRadius: 20,
     },
-    buttonAddCartText:{
+    buttonAddCartText: {
         color: PRIMARY_COLOR,
         fontWeight: 'bold',
     },
-    textOut:{
+    textOut: {
         fontSize: 18,
         color: 'red',
         textAlign: 'center',

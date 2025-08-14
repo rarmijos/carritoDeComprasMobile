@@ -3,11 +3,11 @@ import { StyleSheet, Text, useWindowDimensions, View } from 'react-native'
 import { SECONDARY_COLOR } from '../commons/constants'
 
 //componente reutilizable
-interface Props{
+interface Props {
     children: ReactNode; //cualquier tipo de elemento (imagen, texto, etc)
 }
 
-export const BodyComponent = ({children}:Props) => {
+export const BodyComponent = ({ children }: Props) => {
     //console.log(props);
 
     //hook useWindowDimensions permite obtener las dimensiones de la pantalla
@@ -15,7 +15,7 @@ export const BodyComponent = ({children}:Props) => {
     return (
         <View style={{
             ...styles.container,
-            height: height * 0.88
+            height: height * 0.88,
         }}>
             {children}
         </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         backgroundColor: SECONDARY_COLOR,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
-        paddingHorizontal: 40,
+        paddingHorizontal: 30,
         paddingTop: 30
     },
 })

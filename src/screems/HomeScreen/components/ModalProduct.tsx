@@ -77,9 +77,9 @@ export const ModalProduct = ({ visible, item, setModalVisible, updateStock }: Pr
                                     <Text style={styles.textQuantity}>Total: ${(item.price * quantity).toFixed(2)}</Text>
                                 </View>
                                 <View>
-                                    <TouchableOpacity 
-                                    onPress={handleAddToCart}
-                                    style={styles.buttonAddCart}>
+                                    <TouchableOpacity
+                                        onPress={handleAddToCart}
+                                        style={styles.buttonAddCart}>
                                         <Text style={styles.buttonAddCartText}>Agregar al carrito</Text>
                                     </TouchableOpacity>
                                 </View>

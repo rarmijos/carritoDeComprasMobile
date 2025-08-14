@@ -24,21 +24,21 @@ export const CardProduct = ({ item, updateStock }: Props) => {
                     <Text style={styles.price}>Precio: ${item.price}</Text>
                 </View>
                 <View style={styles.containerIcon}>
-                    <Icon name='add-shopping-cart' 
-                    size={30} 
-                    color={PRIMARY_COLOR}
-                    onPress={() => setModalVisible(true)}
+                    <Icon name='add-shopping-cart'
+                        size={30}
+                        color={PRIMARY_COLOR}
+                        onPress={() => setModalVisible(true)}
                     />
                 </View>
             </View>
-            <ModalProduct item={item} visible={showModal} setModalVisible={()=>setModalVisible(!showModal)} updateStock={updateStock} />
+            <ModalProduct item={item} visible={showModal} setModalVisible={() => setModalVisible(!showModal)} updateStock={updateStock} />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        padding: 15,
+        padding: 20,
         borderColor: PRIMARY_COLOR,
         borderRadius: 20,
         marginBottom: 20,
@@ -48,6 +48,8 @@ const styles = StyleSheet.create({
         elevation: 5,
         flex: 1,
         width: 160,
+        margin: 10,
+        paddingHorizontal: 20,
     },
     title: {
         fontSize: 15,
@@ -59,8 +61,8 @@ const styles = StyleSheet.create({
         marginLeft: 30,
     },
     image: {
-        width: 90,
-        height: 110,
+        width: 80,
+        height: 90,
     },
     containerIcon: {
         flex: 1,
