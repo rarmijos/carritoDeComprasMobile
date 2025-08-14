@@ -4,7 +4,6 @@ import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../commons/constants'
 import { TitleComponent } from '../../components/TitleComponent'
 import { BodyComponent } from '../../components/BodyComponent'
 import { CardProduct } from './components/CardProduct'
-import { ModalProduct } from './components/ModalProduct'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { ModalCart } from './components/ModalCart'
 
@@ -108,9 +107,11 @@ export const HomeScreen = () => {
                     numColumns={2}
                 />
             </BodyComponent>
-            <ModalCart visible={showModal} 
+            <ModalCart 
+            visible={showModal} 
             setModalVisible={()=>setshowModal(!showModal)} 
             cart={cart}
+            closeCart={setcart}
             />
         </View>
     )

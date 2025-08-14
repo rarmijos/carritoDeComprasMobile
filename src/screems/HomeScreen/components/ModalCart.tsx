@@ -9,18 +9,27 @@ interface Props {
     visible: boolean;
     setModalVisible: () => void;
     cart: Cart[];
+    closeCart: (cart: Cart[]) => void;
 }
 
-export const ModalCart = ({ visible, setModalVisible, cart }: Props) => {
+export const ModalCart = ({ visible, setModalVisible, cart, closeCart }: Props) => {
     const { width } = useWindowDimensions()
 
     //funcion para calcular el total a pagar
-    const totalPay=()=>{
-        let total=0;
-        cart.forEach(product=>{
+    const totalPay = () => {
+        let total = 0;
+        cart.forEach(product => {
             total += product.total;
         })
         return total;
+    }
+
+    //funcion para cerrar el modal 
+    const buy = () => {
+        //cerrar el carrito
+        setModalVisible();
+        //poner en 0 el icono del carrito
+        closeCart([]);
     }
 
     return (
@@ -82,7 +91,9 @@ export const ModalCart = ({ visible, setModalVisible, cart }: Props) => {
                     <View style={localstyles.containerTotalPay}>
                         <Text style={localstyles.textTotalPay}>Total pagar: ${totalPay().toFixed(2)}</Text>
                     </View>
-                    <TouchableOpacity style={styles.buttonAddCart}>
+                    <TouchableOpacity style={styles.buttonAddCart}
+                        onPress={buy}
+                    >
                         <Text style={styles.buttonAddCartText}>Comprar</Text>
                     </TouchableOpacity>
                 </View>
@@ -108,11 +119,11 @@ const localstyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-    containerTotalPay:{
+    containerTotalPay: {
         alignItems: 'flex-end',
         marginTop: 10,
     },
-    textTotalPay:{
+    textTotalPay: {
         fontSize: 20,
         fontWeight: 'bold',
         color: PRIMARY_COLOR
